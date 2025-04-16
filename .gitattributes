@@ -1,0 +1,2 @@
+tops_fashion.json filter=lfs diff=lfs merge=lfs -text
+all-MiniLM-L6-v2-local/model.safetensors filter=lfs diff=lfs merge=lfs -text
