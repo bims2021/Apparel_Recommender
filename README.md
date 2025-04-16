@@ -1,9 +1,33 @@
-# Apparel_Recommender
-Gradio based apparel recommder system using sbert.
-Started with bag of words model, then went to tf-idf model followed by idf model.
-Experimented with average word2vec and weighted word2vec.
-Then went for transformers (sbert ie.all_MiniLM-L6-v2) which is the best performing model out of all.
-Have also tried  brand and colour model and autoencoder(second best performing model).
-All of these models are in AmazonApparelRecommendation.ipynb file
-The gradio_apparel_recommender has only the sbert model which takes title of the product and recommends products .
-Have used MinHash-LSH to find near duplicates.
+ Amazon Apparel Recommender System
+
+A Gradio-based product recommender system built using SBERT and other NLP techniques on apparel product data.
+  Overview
+
+This project explores various approaches for text-based product recommendation using product titles. The goal is to recommend visually and semantically similar fashion products given a query product title.
+    Final Gradio App (SBERT-based)
+
+    Takes in a product title
+
+    Returns similar product titles with images
+
+    Built using SBERT (all-MiniLM-L6-v2) – the best performing model
+
+     Models Experimented
+Model	Notes
+Bag of Words	          Baseline model
+TF-IDF	                Improved word weighting
+Idf Only	              Tested variation
+Avg Word2Vec	          Underperformed
+Weighted Word2Vec	      Underperformed
+SBERT	                  Best performance
+Brand + Color Matching	Performed okay
+Autoencoder	🥈          Second best
+
+
+ Extras
+
+    Implemented MinHash + LSH for duplicate product detection
+
+    Used cosine similarity as the main similarity metric
+
+    Focused on textual similarity, not visual features
